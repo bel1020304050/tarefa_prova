@@ -1,6 +1,6 @@
  name: Exercício 1
 
- on:
+ on
   push:
    branches: ['master']
 
@@ -12,20 +12,20 @@
     pages: write
     id-token: write
 
-     environment:
+   environment:
      name: github-pages
 
      steps: 
      - name: Chekout
        uses: actions/checkout@v4
 
-       - name: Setup Pages
-         uses: actions/configure-pages@v5
+     - name: Setup Pages
+  uses: actions/configure-pages@v5
 
-         - name: Upload artifact 
-           uses: actions/upload-pages-artifact@v3
-           with:
-            path: . # onde está o index.html
+  name: Upload artifact 
+ uses: actions/upload-pages-artifact@v3
+ with:
+    path: . # onde está o index.html
 
-            - name: Deploy to GitHub Pages
-              uses: actions/deploy-pages@v4
+ name: Deploy to GitHub Pages
+ uses: actions/deploy-pages@v4
