@@ -1,7 +1,7 @@
  name: Exercício 1
 
- on
-  push:
+ on:
+ push:
    branches: ['master']
 
  jobs:
